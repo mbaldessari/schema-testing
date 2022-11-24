@@ -18,7 +18,7 @@ undefined#/definitions/valuesSecretsV2
 
 | Property                        | Type     | Required | Nullable       | Defined by                                                                                                                                                                                              |
 | :------------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [version](#version)             | Multiple | Required | cannot be null | [Hybrid Cloud Patterns - values-secret.yaml V2 schema](values-secrets-definitions-values-secrets-v2-format-properties-version.md "undefined#/definitions/valuesSecretsV2/properties/version")           |
+| [version](#version)             | Multiple | Required | can be null    | [Hybrid Cloud Patterns - values-secret.yaml V2 schema](values-secrets-definitions-values-secrets-v2-format-properties-version.md "undefined#/definitions/valuesSecretsV2/properties/version")           |
 | [backingStore](#backingstore)   | `string` | Optional | cannot be null | [Hybrid Cloud Patterns - values-secret.yaml V2 schema](values-secrets-definitions-values-secrets-v2-format-properties-backingstore.md "undefined#/definitions/valuesSecretsV2/properties/backingStore") |
 | [vaultPolicies](#vaultpolicies) | `object` | Optional | cannot be null | [Hybrid Cloud Patterns - values-secret.yaml V2 schema](values-secrets-definitions-vaultpolicies.md "undefined#/definitions/valuesSecretsV2/properties/vaultPolicies")                                   |
 | [secrets](#secrets)             | `array`  | Required | cannot be null | [Hybrid Cloud Patterns - values-secret.yaml V2 schema](values-secrets-definitions-secrets.md "undefined#/definitions/valuesSecretsV2/properties/secrets")                                               |
@@ -33,13 +33,21 @@ Version of the secret specification
 
 *   Type: any of the folllowing: `number` or `string` ([Details](values-secrets-definitions-values-secrets-v2-format-properties-version.md))
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Hybrid Cloud Patterns - values-secret.yaml V2 schema](values-secrets-definitions-values-secrets-v2-format-properties-version.md "undefined#/definitions/valuesSecretsV2/properties/version")
 
 ### version Type
 
 any of the folllowing: `number` or `string` ([Details](values-secrets-definitions-values-secrets-v2-format-properties-version.md))
+
+### version Default Value
+
+The default value is:
+
+```json
+"1.0"
+```
 
 ## backingStore
 

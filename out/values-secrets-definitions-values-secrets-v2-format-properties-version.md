@@ -13,3 +13,11 @@ Version of the secret specification
 ## version Type
 
 any of the folllowing: `number` or `string` ([Details](values-secrets-definitions-values-secrets-v2-format-properties-version.md))
+
+## version Default Value
+
+The default value is:
+
+```json
+"1.0"
+```
