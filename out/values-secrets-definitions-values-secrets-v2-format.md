@@ -18,7 +18,7 @@ undefined#/definitions/valuesSecretsV2
 
 | Property                        | Type     | Required | Nullable       | Defined by                                                                                                                                                                                              |
 | :------------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [version](#version)             | Multiple | Required | can be null    | [Hybrid Cloud Patterns - values-secret.yaml V2 schema](values-secrets-definitions-values-secrets-v2-format-properties-version.md "undefined#/definitions/valuesSecretsV2/properties/version")           |
+| [version](#version)             | `string` | Required | can be null    | [Hybrid Cloud Patterns - values-secret.yaml V2 schema](values-secrets-definitions-values-secrets-v2-format-properties-version.md "undefined#/definitions/valuesSecretsV2/properties/version")           |
 | [backingStore](#backingstore)   | `string` | Optional | cannot be null | [Hybrid Cloud Patterns - values-secret.yaml V2 schema](values-secrets-definitions-values-secrets-v2-format-properties-backingstore.md "undefined#/definitions/valuesSecretsV2/properties/backingStore") |
 | [vaultPolicies](#vaultpolicies) | `object` | Optional | cannot be null | [Hybrid Cloud Patterns - values-secret.yaml V2 schema](values-secrets-definitions-vaultpolicies.md "undefined#/definitions/valuesSecretsV2/properties/vaultPolicies")                                   |
 | [secrets](#secrets)             | `array`  | Required | cannot be null | [Hybrid Cloud Patterns - values-secret.yaml V2 schema](values-secrets-definitions-secrets.md "undefined#/definitions/valuesSecretsV2/properties/secrets")                                               |
@@ -31,7 +31,7 @@ Version of the secret specification
 
 *   is required
 
-*   Type: any of the folllowing: `number` or `string` ([Details](values-secrets-definitions-values-secrets-v2-format-properties-version.md))
+*   Type: `string`
 
 *   can be null
 
@@ -39,7 +39,7 @@ Version of the secret specification
 
 ### version Type
 
-any of the folllowing: `number` or `string` ([Details](values-secrets-definitions-values-secrets-v2-format-properties-version.md))
+`string`
 
 ### version Default Value
 
