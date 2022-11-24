@@ -12,7 +12,7 @@ This schema defines the values-secret.yaml file as used by Validated Patterns at
 
 ## Hybrid Cloud Patterns - values-secret.yaml V2 schema Type
 
-unknown ([Hybrid Cloud Patterns - values-secret.yaml V2 schema](values-secrets.md))
+`object` ([Hybrid Cloud Patterns - values-secret.yaml V2 schema](values-secrets.md))
 
 # Hybrid Cloud Patterns - values-secret.yaml V2 schema Definitions
 
