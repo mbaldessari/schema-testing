@@ -17,6 +17,11 @@ This schema defines the values-secret.yaml file as used by Validated Patterns at
 ## Hybrid Cloud Patterns - values-secret.yaml V2 schema Examples
 
 ```yaml
+http://github.com/hybrid-cloud-patterns/common/examples/secrets
+
+```
+
+```yaml
 version: '2.0'
 backingStore: vault
 vaultPolicies:
