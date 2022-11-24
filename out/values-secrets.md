@@ -14,6 +14,66 @@ This schema defines the values-secret.yaml file as used by Validated Patterns at
 
 `object` ([Hybrid Cloud Patterns - values-secret.yaml V2 schema](values-secrets.md))
 
+## Hybrid Cloud Patterns - values-secret.yaml V2 schema Examples
+
+```yaml
+version: '2.0'
+backingStore: vault
+vaultPolicies:
+  basicPolicy: |
+    length=10
+    rule "charset" { charset = "abcdefghijklmnopqrstuvwxyz" min-chars = 1 }
+    rule "charset" { charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" min-chars = 1 }
+    rule "charset" { charset = "0123456789" min-chars = 1 }
+  advancedPolicy: |
+    length=20
+    rule "charset" { charset = "abcdefghijklmnopqrstuvwxyz" min-chars = 1 }
+    rule "charset" { charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" min-chars = 1 }
+    rule "charset" { charset = "0123456789" min-chars = 1 }
+    rule "charset" { charset = "!@#$%^&*" min-chars = 1 }
+secrets:
+  - name: config-demo
+    vaultMount: secret
+    vaultPrefixes:
+      - region-one
+      - snowflake.blueprints.rhecoeng.com
+    fields:
+      - name: secret
+        onMissingValue: generate
+        vaultPolicy: basicPolicy
+      - name: secretprompt
+        value: null
+        onMissingValue: prompt
+        prompt: Please specify the password for application ABC
+      - name: secretprompt2
+        value: defaultvalue
+        onMissingValue: prompt
+        prompt: Please specify the API key for XYZ
+      - name: secretfile
+        path: /tmp/ca.crt
+        onMissingValue: prompt
+        prompt: Insert path to Certificate Authority
+      - name: ca_crt
+        path: /tmp/ca.crt
+        onMissingValue: error
+      - name: ca_crt_b64
+        path: /tmp/ca.crt
+        base64: true
+        onMissingValue: prompt
+  - name: config-demo2
+    vaultPrefixes:
+      - region-one
+      - snowflake.blueprints.rhecoeng.com
+    fields:
+      - name: ca_crt2
+        path: null
+        onMissingValue: prompt
+      - name: ca_crt
+        path: /tmp/ca.crt
+        onMissingValue: error
+
+```
+
 # Hybrid Cloud Patterns - values-secret.yaml V2 schema Definitions
 
 ## Definitions group valuesSecretsV2
